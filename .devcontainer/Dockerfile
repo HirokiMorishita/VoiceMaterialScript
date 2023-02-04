@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:${VARIANT}
 
 RUN apt update && apt install -y ffmpeg
 
-RUN apt install fzf rdfind
+RUN apt install fzf fd-find
 
 RUN curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
 RUN dpkg -i ripgrep_13.0.0_amd64.deb
