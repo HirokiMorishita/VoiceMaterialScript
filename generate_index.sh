@@ -1,6 +1,6 @@
 #!/bin/bash
 
-splitted_voice_directory=$(fdfind --no-ignore -p -g '**/splitted/*'| fzf)
+splitted_voice_directory=$(fdfind --no-ignore -t d -p 'splitted'| fzf)
 if [ -n "$splitted_voice_directory" ] ; then
   if [ -f "$splitted_voice_directory/index.csv" ]; then
     echo "index.csv already exist"
